@@ -7,3 +7,5 @@ function sumar()
 function restar()
     print(var1-var2)
 
+function multiplicar()
+    print(var1xvar2)

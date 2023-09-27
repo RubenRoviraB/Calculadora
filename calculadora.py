@@ -9,6 +9,7 @@ function restar()
     print(var1-var2)
 
 function multiplicar()
+<<<<<<< HEAD
     print(var1xvar2)
 =======
 function sumar() {
@@ -27,3 +28,6 @@ function dividir() {
 print(var1/var2)
 }
 >>>>>>> feature1
+=======
+    print(var1xvar2)
+>>>>>>> 9639a52096b338ced217d1ef5030220aaa808c68

@@ -1,33 +1,45 @@
-var1 = 0
-var2 = 0
+#!C:\Users\zx20student109\AppData\Local\Programs\Python\Python311\python.exe
 
-<<<<<<< HEAD
-function sumar() 
-    print(var1+var2)
+print("Content-type: text/html\n")
 
-function restar()
-    print(var1-var2)
+import os
+from urllib.parse import urlparse, unquote, parse_qs
 
-function multiplicar()
-<<<<<<< HEAD
-    print(var1xvar2)
-=======
-function sumar() {
-print(var1+var2)
-}
+ru = os.environ.get("REQUEST_URI")
+parametros = urlparse(ru)
+param = parse_qs(parametros[4])
 
-function restar() {
-print(var1-var2)
-}
+n1 = int(param["num1"][0])
+n2 = int(param["num2"][0])
+oper = param["operacion"][0]
 
-function multiplicar() {
-print(var1*var2)
-}
+salida = "El resultado de la {} de {} {} {} es {}"
 
-function dividir() {
-print(var1/var2)
-}
->>>>>>> feature1
-=======
-    print(var1xvar2)
->>>>>>> 9639a52096b338ced217d1ef5030220aaa808c68
+print("""
+<html>
+<head>
+<title>Resultado</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body> 
+<h3>Resultado
+""")
+
+
+if oper == "s":
+    print(salida.format("suma",n1,"de",n2,n1+n2))
+
+if oper == "r":
+    print(salida.format("resta",n1,"de",n2,n1-n2))
+
+if oper == "m":
+    print(salida.format("multiplicación",n1,"por",n2,n1*n2))
+
+if oper == "d":
+    print(salida.format("división",n1,"entre",n2,int(n1/n2)))
+
+print("""
+</h3>
+</body>
+</html> 
+""")

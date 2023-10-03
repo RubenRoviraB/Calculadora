@@ -38,6 +38,9 @@ if oper == "m":
 if oper == "d":
     print(salida.format("división",n1,"entre",n2,int(n1/n2)))
 
+if oper == "p":
+    print(salida.format("potencia",n1,"por",n2,n1**n2))
+
 print("""
 </h3>
 </body>

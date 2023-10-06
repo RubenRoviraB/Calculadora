@@ -14,7 +14,7 @@ n2 = int(param["num2"][0])
 oper = param["operacion"][0]
 
 salida = "El resultado de la {} de {} {} {} es {}"
-#hola
+
 print("""
 <html>
 <head>
@@ -43,6 +43,13 @@ if oper == "p":
 
 print("""
 </h3>
-</body>
-</html> 
+
 """)
+
+print("<p>Calculadora</p>")
+
+print("""
+    </body>
+    </html>
+      """)
+ 
